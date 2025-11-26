@@ -1,7 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const isNetlify = process.env.NETLIFY === "true";
+
 export default defineConfig({
-  base: "/3iatlas/",    // required for GitHub Pages at https://3iatlas.github.io/3iatlas
+  // use "/" on Netlify (root), otherwise use the GitHub Pages base
+  base: isNetlify ? "/" : "/3iatlas/",
   plugins: [react()],
 });
