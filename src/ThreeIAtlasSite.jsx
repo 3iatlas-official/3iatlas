@@ -5,8 +5,8 @@ import React from "react";
 // Images referenced from uploaded local paths (these will be transformed to URLs by the platform)
 
 const IMAGES = {
-  hero: "/images/hero.png",      // now hero uses logobadge
-  logoBadge: "/images/logobadge.png",      // logo uses hero
+  hero: "images/logobadge.png",   // relative path WITHOUT leading slash
+  logoBadge: "images/hero.png",   // relative path WITHOUT leading slash
 };
 
 export default function ThreeIAtlasSite() {
